@@ -41,7 +41,9 @@ class VerbTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Table(
+    return Container(
+      margin: EdgeInsets.all(25.0),
+      child: Table(
       border: TableBorder.all(),
       children: [
         TableRow(
@@ -117,6 +119,7 @@ class VerbTable extends StatelessWidget {
           ],
         ),
       ],
+    ),
     );
   }
 }
