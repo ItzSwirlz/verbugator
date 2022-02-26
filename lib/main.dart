@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/spanish_page.dart';
+import 'pages/spanish/spanish_present_tense_page.dart';
 
 void main() {
   runApp(const App());
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SpanishPage(title: 'Verbugator'),
+      home: const SpanishPresentTensePage(),
     );
   }
 }

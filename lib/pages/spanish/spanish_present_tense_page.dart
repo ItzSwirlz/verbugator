@@ -1,42 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:verbugator/pages/spanish/spanish_future_tense_page.dart';
 import 'package:verbugator/verb_table.dart';
 
-class SpanishPage extends StatefulWidget {
-  const SpanishPage({Key? key, required this.title}) : super(key: key);
+import '../../page_switcher_row.dart';
 
-  final String title;
+class SpanishPresentTensePage extends StatefulWidget {
+  const SpanishPresentTensePage({Key? key}) : super(key: key);
 
   @override
-  State<SpanishPage> createState() => _SpanishPageState();
+  State<SpanishPresentTensePage> createState() =>
+      _SpanishPresentTensePageState();
 }
 
-class _SpanishPageState extends State<SpanishPage> {
+class _SpanishPresentTensePageState extends State<SpanishPresentTensePage> {
   String languageValue = 'Spanish';
+  String tenseValue = 'Present Tense';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Verbugator'),
       ),
       body: ListView(children: [
-        DropdownButton<String>(
-          value: languageValue,
-          onChanged: (String? newValue) {
-            setState(() {
-              languageValue = newValue!;
-            });
-          },
-          items: ['Spanish']
-              .map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-          }).toList(),
-        ),
-        Text('-ar verbs', textAlign: TextAlign.center),
-        VerbTable(
+        PageSwitcherRow(languageValue: languageValue, tenseValue: tenseValue),
+        const Text('-ar verbs', textAlign: TextAlign.center),
+        const VerbTable(
             iString: 'Yo',
             iConjugation: '-o',
             youString: 'Tu',
@@ -46,12 +35,11 @@ class _SpanishPageState extends State<SpanishPage> {
             weString: 'Nosotros/as',
             weConjugation: '-amos',
             youAllString: 'Vosotros/as',
-            youAllConjugation: '-ais',
+            youAllConjugation: '-áis',
             theyStrings: <String>['Ellos', 'Ellas', 'Ustedes'],
-            theyConjugation: '-an'
-        ),
-        Text('-er verbs', textAlign: TextAlign.center),
-        VerbTable(
+            theyConjugation: '-an'),
+        const Text('-er verbs', textAlign: TextAlign.center),
+        const VerbTable(
             iString: 'Yo',
             iConjugation: '-o',
             youString: 'Tu',
@@ -61,12 +49,11 @@ class _SpanishPageState extends State<SpanishPage> {
             weString: 'Nosotros/as',
             weConjugation: '-emos',
             youAllString: 'Vosotros/as',
-            youAllConjugation: '-eis',
+            youAllConjugation: '-éis',
             theyStrings: <String>['Ellos', 'Ellas', 'Ustedes'],
-            theyConjugation: '-en'
-        ),
-        Text('-ir verbs', textAlign: TextAlign.center),
-        VerbTable(
+            theyConjugation: '-en'),
+        const Text('-ir verbs', textAlign: TextAlign.center),
+        const VerbTable(
             iString: 'Yo',
             iConjugation: '-o',
             youString: 'Tu',
@@ -76,10 +63,9 @@ class _SpanishPageState extends State<SpanishPage> {
             weString: 'Nosotros/as',
             weConjugation: '-imos',
             youAllString: 'Vosotros/as',
-            youAllConjugation: '-is',
+            youAllConjugation: '-ís',
             theyStrings: <String>['Ellos', 'Ellas', 'Ustedes'],
-            theyConjugation: '-en'
-        ),
+            theyConjugation: '-en'),
       ]), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
