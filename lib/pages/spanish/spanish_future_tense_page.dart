@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:verbugator/page_switcher_row.dart';
-import 'package:verbugator/pages/spanish/spanish_present_tense_page.dart';
 import 'package:verbugator/verb_table.dart';
 
 class SpanishFutureTensePage extends StatefulWidget {
