@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:verbugator/pages/portuguese/portuguese_future_tense_page.dart';
 import 'package:verbugator/pages/portuguese/portuguese_present_tense_page.dart';
 import 'package:verbugator/pages/spanish/spanish_future_tense_page.dart';
 import 'package:verbugator/pages/spanish/spanish_present_tense_page.dart';
@@ -94,6 +95,16 @@ class _PageSwitcherRowState extends State<PageSwitcherRow> {
                           MaterialPageRoute(
                               builder: (context) =>
                                   const PortuguesePresentTensePage()));
+                      break;
+                    }
+
+                  case 'Future Tense':
+                    {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                              const PortugueseFutureTensePage()));
                       break;
                     }
                 }
