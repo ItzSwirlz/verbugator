@@ -8,8 +8,7 @@ class FrenchPresentTensePage extends StatefulWidget {
   const FrenchPresentTensePage({Key? key}) : super(key: key);
 
   @override
-  State<FrenchPresentTensePage> createState() =>
-      _FrenchPresentTensePageState();
+  State<FrenchPresentTensePage> createState() => _FrenchPresentTensePageState();
 }
 
 class _FrenchPresentTensePageState extends State<FrenchPresentTensePage> {

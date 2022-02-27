@@ -6,7 +6,8 @@ class PortugueseFutureTensePage extends StatefulWidget {
   const PortugueseFutureTensePage({Key? key}) : super(key: key);
 
   @override
-  State<PortugueseFutureTensePage> createState() => _PortugueseFutureTensePageState();
+  State<PortugueseFutureTensePage> createState() =>
+      _PortugueseFutureTensePageState();
 }
 
 class _PortugueseFutureTensePageState extends State<PortugueseFutureTensePage> {

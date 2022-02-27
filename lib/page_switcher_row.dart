@@ -3,6 +3,8 @@ import 'package:verbugator/pages/portuguese/portuguese_future_tense_page.dart';
 import 'package:verbugator/pages/portuguese/portuguese_present_tense_page.dart';
 import 'package:verbugator/pages/spanish/spanish_future_tense_page.dart';
 import 'package:verbugator/pages/spanish/spanish_present_tense_page.dart';
+import 'package:verbugator/pages/french/french_future_tense_page.dart';
+import 'package:verbugator/pages/french/french_present_tense_page.dart';
 
 class PageSwitcherRow extends StatefulWidget {
   const PageSwitcherRow({Key? key, this.languageValue, this.tenseValue})
@@ -27,13 +29,13 @@ class _PageSwitcherRowState extends State<PageSwitcherRow> {
               Navigator.of(context).pop(true);
               var languageValue = newValue!;
               switch (newValue) {
-                case 'Spanish':
+                case 'French':
                   {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                const SpanishPresentTensePage()));
+                                const FrenchPresentTensePage()));
                     break;
                   }
                 case 'Portuguese':
@@ -45,10 +47,19 @@ class _PageSwitcherRowState extends State<PageSwitcherRow> {
                                 const PortuguesePresentTensePage()));
                     break;
                   }
+                case 'Spanish':
+                  {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const SpanishPresentTensePage()));
+                    break;
+                  }
               }
             });
           },
-          items: ['Spanish', 'Portuguese']
+          items: ['French', 'Portuguese', 'Spanish']
               .map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
@@ -86,6 +97,29 @@ class _PageSwitcherRowState extends State<PageSwitcherRow> {
                     }
                 }
               }
+              if (widget.languageValue == 'French') {
+                switch (newValue) {
+                  case 'Present Tense':
+                    {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const FrenchPresentTensePage()));
+                      break;
+                    }
+
+                  case 'Future Tense':
+                    {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const FrenchFutureTensePage()));
+                      break;
+                    }
+                }
+              }
               if (widget.languageValue == 'Portuguese') {
                 switch (newValue) {
                   case 'Present Tense':
@@ -104,7 +138,7 @@ class _PageSwitcherRowState extends State<PageSwitcherRow> {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                              const PortugueseFutureTensePage()));
+                                  const PortugueseFutureTensePage()));
                       break;
                     }
                 }
