@@ -44,82 +44,82 @@ class VerbTable extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(25.0),
       child: Table(
-      border: TableBorder.all(),
-      children: [
-        TableRow(
-          children: [
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(iString),
-            ),
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(iConjugation),
-            ),
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(weString),
-            ),
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(weConjugation),
-            )
-          ],
-        ),
-        TableRow(
-          children: [
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(youString),
-            ),
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(youConjugation),
-            ),
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(youAllString),
-            ),
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(youAllConjugation),
-            )
-          ],
-        ),
-        TableRow(
-          children: [
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(heSheStrings.toString()),
-            ),
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(heSheConjugation),
-            ),
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(theyStrings.toString()),
-            ),
-            Container(
-              width: 42,
-              height: 42,
-              child: Text(theyConjugation),
-            )
-          ],
-        ),
-      ],
-    ),
+        border: TableBorder.all(),
+        children: [
+          TableRow(
+            children: [
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(iString),
+              ),
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(iConjugation),
+              ),
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(weString),
+              ),
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(weConjugation),
+              )
+            ],
+          ),
+          TableRow(
+            children: [
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(youString),
+              ),
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(youConjugation),
+              ),
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(youAllString),
+              ),
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(youAllConjugation),
+              )
+            ],
+          ),
+          TableRow(
+            children: [
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(heSheStrings.toString()),
+              ),
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(heSheConjugation),
+              ),
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(theyStrings.toString()),
+              ),
+              Container(
+                width: 42,
+                height: 42,
+                child: Text(theyConjugation),
+              )
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

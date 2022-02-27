@@ -22,4 +22,6 @@ doc/api/
 
 # Editor junk
 .idea/*
+.idea/libraries/Dart_SDK.xml
 .vs/
+verbugator.iml

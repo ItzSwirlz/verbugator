@@ -3,16 +3,17 @@ import 'package:verbugator/verb_table.dart';
 
 import '../../page_switcher_row.dart';
 
-class SpanishPresentTensePage extends StatefulWidget {
-  const SpanishPresentTensePage({Key? key}) : super(key: key);
+class PortuguesePresentTensePage extends StatefulWidget {
+  const PortuguesePresentTensePage({Key? key}) : super(key: key);
 
   @override
-  State<SpanishPresentTensePage> createState() =>
-      _SpanishPresentTensePageState();
+  State<PortuguesePresentTensePage> createState() =>
+      _PortuguesePresentTensePageState();
 }
 
-class _SpanishPresentTensePageState extends State<SpanishPresentTensePage> {
-  String languageValue = 'Spanish';
+class _PortuguesePresentTensePageState
+    extends State<PortuguesePresentTensePage> {
+  String languageValue = 'Portuguese';
   String tenseValue = 'Present Tense';
 
   @override
@@ -25,46 +26,46 @@ class _SpanishPresentTensePageState extends State<SpanishPresentTensePage> {
         PageSwitcherRow(languageValue: languageValue, tenseValue: tenseValue),
         const Text('-ar verbs', textAlign: TextAlign.center),
         const VerbTable(
-            iString: 'Yo',
+            iString: 'Eu',
             iConjugation: '-o',
             youString: 'Tu',
             youConjugation: '-as',
-            heSheStrings: <String>['El', 'Ella', 'Usted'],
+            heSheStrings: <String>['Ele', 'Ela', 'Você'],
             heSheConjugation: '-a',
-            weString: 'Nosotros/as',
+            weString: 'Nós',
             weConjugation: '-amos',
-            youAllString: 'Vosotros/as',
-            youAllConjugation: '-áis',
-            theyStrings: <String>['Ellos', 'Ellas', 'Ustedes'],
-            theyConjugation: '-an'),
+            youAllString: 'Vós',
+            youAllConjugation: '-ais',
+            theyStrings: <String>['Eles', 'Elas', 'Vocês'],
+            theyConjugation: '-am'),
         const Text('-er verbs', textAlign: TextAlign.center),
         const VerbTable(
-            iString: 'Yo',
+            iString: 'Eu',
             iConjugation: '-o',
             youString: 'Tu',
             youConjugation: '-es',
-            heSheStrings: <String>['El', 'Ella', 'Usted'],
+            heSheStrings: <String>['Ele', 'Ela', 'Você'],
             heSheConjugation: '-e',
-            weString: 'Nosotros/as',
+            weString: 'Nós',
             weConjugation: '-emos',
-            youAllString: 'Vosotros/as',
-            youAllConjugation: '-éis',
-            theyStrings: <String>['Ellos', 'Ellas', 'Ustedes'],
-            theyConjugation: '-en'),
+            youAllString: 'Vós',
+            youAllConjugation: '-eis',
+            theyStrings: <String>['Eles', 'Elas', 'Vocês'],
+            theyConjugation: '-em'),
         const Text('-ir verbs', textAlign: TextAlign.center),
         const VerbTable(
-            iString: 'Yo',
+            iString: 'Eu',
             iConjugation: '-o',
             youString: 'Tu',
             youConjugation: '-es',
-            heSheStrings: <String>['El', 'Ella', 'Usted'],
+            heSheStrings: <String>['Ele', 'Ela', 'Você'],
             heSheConjugation: '-e',
-            weString: 'Nosotros/as',
+            weString: 'Nós',
             weConjugation: '-imos',
-            youAllString: 'Vosotros/as',
-            youAllConjugation: '-ís',
-            theyStrings: <String>['Ellos', 'Ellas', 'Ustedes'],
-            theyConjugation: '-en'),
+            youAllString: 'Vós',
+            youAllConjugation: '-is',
+            theyStrings: <String>['Eles', 'Elas', 'Vocês'],
+            theyConjugation: '-em'),
       ]), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

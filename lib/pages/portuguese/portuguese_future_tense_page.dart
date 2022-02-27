@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:verbugator/page_switcher_row.dart';
 import 'package:verbugator/verb_table.dart';
 
-class SpanishFutureTensePage extends StatefulWidget {
-  const SpanishFutureTensePage({Key? key}) : super(key: key);
+class PortugueseFutureTensePage extends StatefulWidget {
+  const PortugueseFutureTensePage({Key? key}) : super(key: key);
 
   @override
-  State<SpanishFutureTensePage> createState() => _SpanishFutureTensePageState();
+  State<PortugueseFutureTensePage> createState() => _PortugueseFutureTensePageState();
 }
 
-class _SpanishFutureTensePageState extends State<SpanishFutureTensePage> {
-  String languageValue = 'Spanish';
+class _PortugueseFutureTensePageState extends State<PortugueseFutureTensePage> {
+  String languageValue = 'Portuguese';
   String tenseValue = 'Future Tense';
 
   @override
@@ -25,18 +25,18 @@ class _SpanishFutureTensePageState extends State<SpanishFutureTensePage> {
             'Any regular verb has the following added to the infinitive:',
             textAlign: TextAlign.center),
         const VerbTable(
-            iString: 'Yo',
-            iConjugation: '-é',
+            iString: 'Eu',
+            iConjugation: '-ei',
             youString: 'Tu',
             youConjugation: '-ás',
-            heSheStrings: <String>['El', 'Ella', 'Usted'],
+            heSheStrings: <String>['Ele', 'Ela', 'Você'],
             heSheConjugation: '-á',
-            weString: 'Nosotros/as',
+            weString: 'Nos',
             weConjugation: '-emos',
-            youAllString: 'Vosotros/as',
-            youAllConjugation: '-éis',
-            theyStrings: <String>['Ellos', 'Ellas', 'Ustedes'],
-            theyConjugation: '-án'),
+            youAllString: 'Vós',
+            youAllConjugation: '-eis',
+            theyStrings: <String>['Eles', 'Elas', 'Vocês'],
+            theyConjugation: '-ão'),
       ]), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
