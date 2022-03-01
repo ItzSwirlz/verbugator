@@ -23,6 +23,18 @@ class _FrenchPresentTensePageState extends State<FrenchPresentTensePage> {
       ),
       body: ListView(children: [
         PageSwitcherRow(languageValue: languageValue, tenseValue: tenseValue),
+        const Center(
+          child: Text.rich(
+            TextSpan(
+              style: TextStyle(fontSize: 25),
+              children: <TextSpan>[
+                TextSpan(
+                    text: 'NOTE: This is speaking in an indicative mood.',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ],
+            ),
+          ),
+        ),
         const Text('-er verbs', textAlign: TextAlign.center),
         const VerbTable(
             iString: 'Je',

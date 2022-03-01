@@ -22,6 +22,18 @@ class _PortugueseFutureTensePageState extends State<PortugueseFutureTensePage> {
       ),
       body: ListView(children: [
         PageSwitcherRow(languageValue: languageValue, tenseValue: tenseValue),
+        const Center(
+          child: Text.rich(
+            TextSpan(
+              style: TextStyle(fontSize: 25),
+              children: <TextSpan>[
+                TextSpan(
+                    text: 'NOTE: This is speaking in an indicative mood.',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ],
+            ),
+          ),
+        ),
         const Text(
             'Any regular verb has the following added to the infinitive:',
             textAlign: TextAlign.center),

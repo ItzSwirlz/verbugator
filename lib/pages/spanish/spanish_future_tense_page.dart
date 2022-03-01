@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:verbugator/page_switcher_row.dart';
 import 'package:verbugator/verb_table.dart';
@@ -21,6 +22,18 @@ class _SpanishFutureTensePageState extends State<SpanishFutureTensePage> {
       ),
       body: ListView(children: [
         PageSwitcherRow(languageValue: languageValue, tenseValue: tenseValue),
+        const Center(
+          child: Text.rich(
+            TextSpan(
+              style: TextStyle(fontSize: 25),
+              children: <TextSpan>[
+                TextSpan(
+                    text: 'NOTE: This is speaking in an indicative mood.',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+              ],
+            ),
+          ),
+        ),
         const Text(
             'Any regular verb has the following added to the infinitive:',
             textAlign: TextAlign.center),
