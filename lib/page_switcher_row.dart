@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:verbugator/pages/portuguese/portuguese_future_tense_page.dart';
 import 'package:verbugator/pages/portuguese/portuguese_present_tense_page.dart';
 import 'package:verbugator/pages/spanish/spanish_future_tense_page.dart';
+import 'package:verbugator/pages/spanish/spanish_past_tense_page.dart';
 import 'package:verbugator/pages/spanish/spanish_present_tense_page.dart';
 import 'package:verbugator/pages/french/french_future_tense_page.dart';
 import 'package:verbugator/pages/french/french_present_tense_page.dart';
@@ -76,6 +77,16 @@ class _PageSwitcherRowState extends State<PageSwitcherRow> {
               Navigator.of(context).pop(true);
               if (widget.languageValue == 'Spanish') {
                 switch (newValue) {
+                  case 'Past Tense':
+                    {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const SpanishPastTensePage()));
+                      break;
+                    }
+
                   case 'Present Tense':
                     {
                       Navigator.push(
@@ -145,7 +156,7 @@ class _PageSwitcherRowState extends State<PageSwitcherRow> {
               }
             });
           },
-          items: ['Present Tense', 'Future Tense']
+          items: ['Past Tense', 'Present Tense', 'Future Tense']
               .map<DropdownMenuItem<String>>((String value) {
             return DropdownMenuItem<String>(
               value: value,
